@@ -14,6 +14,11 @@ public class App {
         // Initialize Hibernate configuration and session factory
         Configuration con = new Configuration();
         con.configure("hibernate.cfg.xml");
+        /*
+        For earlier Hibernate versions
+        ServiceRegistry reg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).buildServiceRegistry());
+        SessionFactory sf = con.buildSessionFactory(reg);
+        */
         SessionFactory sf = con.buildSessionFactory();
 
         // Scanner for user input
