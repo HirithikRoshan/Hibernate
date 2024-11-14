@@ -72,3 +72,46 @@ public class App {
         }
     }
 }
+/*
+package koli.Hibernate_ORM;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class App {
+    public static void main(String[] args) {
+        // initialize hibernate configuration and session factory
+        Configuration con = new Configuration();
+        con.configure("hibernate.cfg.xml");
+        SessionFactory sf = con.buildSessionFactory();
+
+        try {
+            // create a new team object with predefined values
+      //     Team teamMember = new Team("Hirithik", 22, "Unalloacted");
+      //     Team teamMember = new Team("Kishore", 22, "Unalloacted");
+     //      Team teamMember = new Team("Sanjeev", 24, "VLSI");
+             Team teamMember = new Team("Abi", 22, "Stack");
+
+            // open session and begin transaction
+            Session session = sf.openSession();
+            Transaction tx = session.beginTransaction();
+
+            // save the single team member to the database
+            session.save(teamMember);
+
+            // commit the transaction and close the session
+            tx.commit();
+            session.close();
+
+            System.out.println("Team member saved to the database.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            sf.close();
+        }
+    }
+}
+*/
