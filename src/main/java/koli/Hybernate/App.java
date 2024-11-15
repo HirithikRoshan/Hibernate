@@ -115,3 +115,56 @@ public class App {
     }
 }
 */
+
+/*
+package koli.Hibernate_ORM;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class App {
+  
+	public static void main(String[] args) {
+        // initialize hibernate configuration and session factory
+        Configuration con = new Configuration();
+        con.configure("hibernate.cfg.xml");
+        SessionFactory sf = con.buildSessionFactory();
+
+        try {
+        	Name HR = new Name("Hirithik","Roshan");
+        	Name KS = new Name("Kishore","S");
+        	Name SD = new Name("Sanjeev","Darshan");
+        	Name AP = new Name("Abinaya","P");
+        	
+           // Create a new team object with predefined values
+             Team teamMember1 = new Team(1,HR, 22, "Unalloacted");
+             Team teamMember2 = new Team(2,KS, 22, "Unalloacted");
+             Team teamMember3 = new Team(3,SD, 24, "VLSI");
+             Team teamMember4 = new Team(4,AP, 22, "Stack");
+
+            // open session and begin transaction
+            Session session = sf.openSession();
+            Transaction tx = session.beginTransaction();
+
+            // save the single team member to the database
+            session.save(teamMember1);
+            session.save(teamMember2);
+            session.save(teamMember3);
+            session.save(teamMember4);
+
+            // commit the transaction and close the session
+            tx.commit();
+            session.close();
+
+            System.out.println("Team member saved to the database.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            sf.close();
+        }
+    }
+}
+*/
