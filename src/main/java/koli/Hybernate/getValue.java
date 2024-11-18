@@ -1,3 +1,4 @@
+// Also use JPA for switching one framework to other easily
 package koli.Hibernate_ORM;
 
 import org.hibernate.Session;
