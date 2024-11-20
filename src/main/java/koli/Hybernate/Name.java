@@ -1,7 +1,7 @@
 package koli.Hibernate_ORM;
 
 import jakarta.persistence.Embeddable;
-
+// Without creating new table add into other table
 @Embeddable
 public class Name {
           
